@@ -1,0 +1,40 @@
+bean:
+  - tlcsdm-bean/**
+
+context:
+  - tlcsdm-context/**
+
+core:
+  - tlcsdm-core/**
+
+factory:
+  - tlcsdm-factory/**
+
+test:
+  - tlcsdm-bean/src/test/**
+  - tlcsdm-context/src/test/**
+  - tlcsdm-core/src/test/**
+  - tlcsdm-factory/src/test/**
+
+workflow:
+  - .github/**
+  - .mergify.yml
+
+documentation:
+  - CHANGELOG.md
+  - LICENSE
+  - README.md
+  - CONTRIBUTING.md
+  - SECURITY.md
+
+dependencies:
+  - pom.xml
+  - tlcsdm-bean/pom.xml
+  - tlcsdm-context/pom.xml
+  - tlcsdm-core/pom.xml
+  - tlcsdm-factory/pom.xml
+
+automerge:
+  - all: [ 'README.md' ]
+  - all: [ 'CHANGELOG.md' ]
+  - all: [ 'CONTRIBUTORS.md' ]
