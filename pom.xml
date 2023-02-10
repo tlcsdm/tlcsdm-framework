@@ -36,7 +36,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>tlcsdm-framework</name>
-    <description>tlcsdm-framework</description>
+    <description>Tlcsdm Framework</description>
     <url>https://github.com/tlcsdm/tlcsdm-framework.git</url>
 
     <modules>
