@@ -59,7 +59,7 @@
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
-        <tlcsdm-common.version>1.4.1</tlcsdm-common.version>
+        <tlcsdm-common.version>1.4.3</tlcsdm-common.version>
         <tlcsdm-asyncTool.version>1.0.0</tlcsdm-asyncTool.version>
         <lombok.version>1.18.26</lombok.version>
         <poi-ooxml.version>5.2.3</poi-ooxml.version>
