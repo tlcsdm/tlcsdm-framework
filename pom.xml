@@ -33,18 +33,11 @@
 
     <groupId>com.tlcsdm</groupId>
     <artifactId>tlcsdm-framework</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <version>1.0.0</version>
     <name>tlcsdm-framework</name>
     <description>Tlcsdm Framework</description>
     <url>https://github.com/tlcsdm/tlcsdm-framework.git</url>
-
-    <modules>
-        <module>tlcsdm-context</module>
-        <module>tlcsdm-bean</module>
-        <module>tlcsdm-core</module>
-        <module>tlcsdm-factory</module>
-    </modules>
 
     <properties>
         <tlcsdm-framework.version>1.0.0</tlcsdm-framework.version>
@@ -59,7 +52,7 @@
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
-        <tlcsdm-common.version>1.4.1</tlcsdm-common.version>
+        <tlcsdm-common.version>1.4.3</tlcsdm-common.version>
         <tlcsdm-asyncTool.version>1.0.0</tlcsdm-asyncTool.version>
         <lombok.version>1.18.26</lombok.version>
         <poi-ooxml.version>5.2.3</poi-ooxml.version>
@@ -98,160 +91,7 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.tlcsdm</groupId>
-                <artifactId>javafxTool-core</artifactId>
-                <version>${javafxTool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tlcsdm</groupId>
-                <artifactId>javafxTool-frame</artifactId>
-                <version>${javafxTool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tlcsdm</groupId>
-                <artifactId>javafxTool-login</artifactId>
-                <version>${javafxTool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi-ooxml</artifactId>
-                <version>${poi-ooxml.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.freemarker</groupId>
-                <artifactId>freemarker</artifactId>
-                <version>${freemarker.version}</version>
-            </dependency>
-            <!-- 配合freemarker对xml进行XPath支持 -->
-            <dependency>
-                <groupId>jaxen</groupId>
-                <artifactId>jaxen</artifactId>
-                <version>${jaxen.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sikulix</groupId>
-                <artifactId>sikulixapi</artifactId>
-                <version>${sikulixapi.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tlcsdm</groupId>
-                <artifactId>tlcsdm-common</artifactId>
-                <version>${tlcsdm-common.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tlcsdm</groupId>
-                <artifactId>tlcsdm-asyncTool</artifactId>
-                <version>${tlcsdm-asyncTool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logback-classic.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-configuration2</artifactId>
-                <version>${commons-configuration2.version}</version>
-            </dependency>
-            <!-- 使用aviator需要手动日内与关联依赖commons-beanutils，解决版本问题 -->
-            <dependency>
-                <groupId>com.googlecode.aviator</groupId>
-                <artifactId>aviator</artifactId>
-                <version>${aviator.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-beanutils</groupId>
-                <artifactId>commons-beanutils</artifactId>
-                <version>${commons-beanutils.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${commons-lang3.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-all</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-core</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-json</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-crypto</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-poi</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-log</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-dfa</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-extra</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-cache</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>${log4j2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-api</artifactId>
-                <version>${log4j2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>log4j-over-slf4j</artifactId>
-                <version>${log4j-over-slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.java-diff-utils</groupId>
-                <artifactId>java-diff-utils</artifactId>
-                <version>${java-diff-utils.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <issueManagement>
         <system>Github Issue</system>
